@@ -18,8 +18,8 @@ Hand-written Swift and Kotlin; the only dependency is Google Play services'
 ## Features
 
 - 🔢 **Native code field** — `<native:otp-field>` with 4–10 boxes, `native:model` binding, `@change` and `@complete`, error and disabled states, theme colours, light and dark
-- 🍏 **iOS keyboard autofill** — `textContentType = .oneTimeCode` and the number pad, so Messages' code suggestion just works
-- 🤖 **Android SMS User Consent** — any verification SMS, optionally only from your sender; the user taps Allow once
+- ⌨️ **iOS keyboard autofill** — `textContentType = .oneTimeCode` and the number pad, so Messages' code suggestion just works
+- 💬 **Android SMS User Consent** — any verification SMS, optionally only from your sender; the user taps Allow once
 - 🤫 **Android SMS Retriever** — zero-tap: the SMS ends with your 11-character app hash, which `OtpAutofill::appHash()` computes for you
 - 🔍 **Code extraction** — the first 4–8 digit run (or exactly N digits) that is not part of a longer number, on the device and in PHP
 - 📣 **Events** — `OtpReceived` (code, message, source) and `OtpFailed` (timeout, denied, no_code, unavailable)
@@ -232,4 +232,6 @@ See the `CHANGELOG.md` file included with the package for the full version histo
 
 MIT — see the `LICENSE` file included with the package.
 
-OTP Autofill is a free plugin from vipertecpro.com, home of the paid NativePHP Mobile plugins Rich-Text Editor, Onboarding & Tours, Health Kit and Native Charts.
+vipertecpro is an independent developer. NativePHP, Laravel, Apple, Google, Firebase and other names are trademarks of their respective owners; this package is not affiliated with or endorsed by them.
+
+OTP Autofill is a free plugin from vipertecpro.com, home of the paid plugins for NativePHP Mobile: Rich-Text Editor, Onboarding & Tours, Health Kit and Native Charts.
