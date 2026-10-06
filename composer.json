@@ -10,7 +10,21 @@
         }
     ],
     "homepage": "https://github.com/vipertecpro/otp-autofill",
-    "keywords": ["nativephp", "mobile", "otp", "one-time-code", "sms", "verification", "2fa", "autofill", "sms-retriever"],
+    "support": {
+        "issues": "https://github.com/vipertecpro/otp-autofill/issues",
+        "source": "https://github.com/vipertecpro/otp-autofill"
+    },
+    "keywords": [
+        "nativephp",
+        "mobile",
+        "otp",
+        "one-time-code",
+        "sms",
+        "verification",
+        "2fa",
+        "autofill",
+        "sms-retriever"
+    ],
     "require": {
         "php": "^8.4",
         "nativephp/mobile": "^4.0",
