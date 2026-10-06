@@ -1,0 +1,100 @@
+{
+    "name": "vipertecpro/otp-autofill",
+    "version": "1.0.0",
+    "description": "SMS one-time-code autofill: a native <native:otp-field> that iOS fills from the keyboard's code suggestion, plus the Android SMS User Consent and SMS Retriever APIs that read the code from the incoming SMS — no SMS permission, result by event.",
+    "namespace": "OtpAutofill",
+    "keywords": [
+        "otp",
+        "one-time-code",
+        "sms",
+        "verification",
+        "2fa",
+        "autofill",
+        "sms-retriever",
+        "user-consent",
+        "login",
+        "phone"
+    ],
+    "category": "authentication",
+    "license": "MIT",
+    "pricing": {
+        "type": "free"
+    },
+    "author": {
+        "name": "vipertecpro",
+        "email": "vipertecpro@gmail.com",
+        "url": "https://github.com/vipertecpro"
+    },
+    "homepage": "https://github.com/vipertecpro/otp-autofill",
+    "repository": "https://github.com/vipertecpro/otp-autofill",
+    "funding": [],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "icon": "resources/icon.png",
+    "bridge_functions": [
+        {
+            "name": "OtpAutofill.Start",
+            "android": "com.vipertecpro.plugins.otp_autofill.OtpAutofillFunctions.Start",
+            "ios": "OtpAutofillFunctions.Start",
+            "description": "Start waiting for a one-time-code SMS (Android consent or retriever mode); reports how the code will arrive on this platform"
+        },
+        {
+            "name": "OtpAutofill.Stop",
+            "android": "com.vipertecpro.plugins.otp_autofill.OtpAutofillFunctions.Stop",
+            "ios": "OtpAutofillFunctions.Stop",
+            "description": "Stop waiting for a one-time-code SMS"
+        },
+        {
+            "name": "OtpAutofill.AppHash",
+            "android": "com.vipertecpro.plugins.otp_autofill.OtpAutofillFunctions.AppHash",
+            "ios": "OtpAutofillFunctions.AppHash",
+            "description": "Return the 11-character app hash an SMS must contain for the Android SMS Retriever API"
+        }
+    ],
+    "components": [
+        {
+            "type": "otp_field",
+            "element": "Vipertecpro\\OtpAutofill\\Elements\\OtpField",
+            "blade": "Vipertecpro\\OtpAutofill\\Components\\OtpField",
+            "android_renderer": "com.vipertecpro.plugins.otp_autofill.OtpFieldRenderer",
+            "ios_renderer": "OtpFieldRenderer",
+            "self_closing": true,
+            "element_events": ["complete"]
+        }
+    ],
+    "android": {
+        "min_version": 29,
+        "permissions": [],
+        "repositories": [],
+        "dependencies": {
+            "implementation": [
+                "com.google.android.gms:play-services-auth-api-phone:18.2.0"
+            ]
+        },
+        "activities": [],
+        "services": [],
+        "receivers": [],
+        "providers": []
+    },
+    "ios": {
+        "min_version": "15.0",
+        "info_plist": {},
+        "dependencies": {
+            "swift_packages": [],
+            "pods": []
+        }
+    },
+    "assets": {
+        "android": [],
+        "ios": []
+    },
+    "secrets": [],
+    "events": [
+        "Vipertecpro\\OtpAutofill\\Events\\OtpReceived",
+        "Vipertecpro\\OtpAutofill\\Events\\OtpFailed"
+    ],
+    "service_provider": "Vipertecpro\\OtpAutofill\\OtpAutofillServiceProvider",
+    "hooks": {}
+}

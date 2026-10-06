@@ -1,0 +1,48 @@
+{
+    "name": "vipertecpro/otp-autofill",
+    "description": "SMS one-time-code autofill for NativePHP Mobile — a native code field with iOS keyboard autofill and the Android SMS User Consent and SMS Retriever APIs.",
+    "type": "nativephp-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "vipertecpro",
+            "email": "vipertecpro@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/vipertecpro/otp-autofill",
+    "keywords": ["nativephp", "mobile", "otp", "one-time-code", "sms", "verification", "2fa", "autofill", "sms-retriever"],
+    "require": {
+        "php": "^8.4",
+        "nativephp/mobile": "^4.0",
+        "nativephp/mobile-ui": "^0.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vipertecpro\\OtpAutofill\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vipertecpro\\OtpAutofill\\OtpAutofillServiceProvider"
+            ]
+        },
+        "nativephp": {
+            "manifest": "nativephp.json"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0|^4.0",
+        "laravel/framework": "^12.0|^13.0"
+    },
+    "scripts": {
+        "test": "pest"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
