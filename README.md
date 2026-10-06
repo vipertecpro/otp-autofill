@@ -1,4 +1,4 @@
-# OTP Autofill — SMS one-time codes that fill themselves in NativePHP Mobile
+# OTP Autofill for NativePHP — SMS one-time codes that fill themselves
 
 Phone verification and sign-in codes without copy-and-paste. OTP Autofill gives
 you a native **`<native:otp-field>`** — a row of digit boxes backed by a real
@@ -232,6 +232,6 @@ See the `CHANGELOG.md` file included with the package for the full version histo
 
 MIT — see the `LICENSE` file included with the package.
 
-vipertecpro is an independent developer. NativePHP, Laravel, Apple, Google, Firebase and other names are trademarks of their respective owners; this package is not affiliated with or endorsed by them.
+vipertecpro is an independent developer. NativePHP, Laravel, Apple, Google, Firebase and other names are trademarks of their respective owners; this package is not affiliated with or endorsed by them. iOS and Apple are trademarks of Apple Inc. Android, Google Play and Firebase are trademarks of Google LLC.
 
-OTP Autofill is a free plugin from vipertecpro.com, home of the paid plugins for NativePHP Mobile: Rich-Text Editor, Onboarding & Tours, Health Kit and Native Charts.
+OTP Autofill is a free plugin from vipertecpro.com, home of the paid plugins for NativePHP Mobile: Rich-Text Editor, Onboarding & Tours, Health Data and Native Charts.
