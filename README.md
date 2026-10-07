@@ -17,14 +17,14 @@ Hand-written Swift and Kotlin; the only dependency is Google Play services'
 
 ## Features
 
-- 🔢 **Native code field** — `<native:otp-field>` with 4–10 boxes, `native:model` binding, `@change` and `@complete`, error and disabled states, theme colours, light and dark
+- **Native code field** — `<native:otp-field>` with 4–10 boxes, `native:model` binding, `@change` and `@complete`, error and disabled states, theme colours, light and dark
 - ⌨️ **iOS keyboard autofill** — `textContentType = .oneTimeCode` and the number pad, so Messages' code suggestion just works
-- 💬 **Android SMS User Consent** — any verification SMS, optionally only from your sender; the user taps Allow once
-- 🤫 **Android SMS Retriever** — zero-tap: the SMS ends with your 11-character app hash, which `OtpAutofill::appHash()` computes for you
-- 🔍 **Code extraction** — the first 4–8 digit run (or exactly N digits) that is not part of a longer number, on the device and in PHP
-- 📣 **Events** — `OtpReceived` (code, message, source) and `OtpFailed` (timeout, denied, no_code, unavailable)
-- 🔐 **No SMS permission** — never `READ_SMS` or `RECEIVE_SMS`
-- ♿ **Accessible** — one labelled field for screen readers, the boxes are decoration
+- **Android SMS User Consent** — any verification SMS, optionally only from your sender; the user taps Allow once
+- **Android SMS Retriever** — zero-tap: the SMS ends with your 11-character app hash, which `OtpAutofill::appHash()` computes for you
+- **Code extraction** — the first 4–8 digit run (or exactly N digits) that is not part of a longer number, on the device and in PHP
+- **Events** — `OtpReceived` (code, message, source) and `OtpFailed` (timeout, denied, no_code, unavailable)
+- **No SMS permission** — never `READ_SMS` or `RECEIVE_SMS`
+- **Accessible** — one labelled field for screen readers, the boxes are decoration
 
 ## Requirements
 
@@ -228,7 +228,7 @@ with the package for local setup, the project layout and how it works.
 
 See the `CHANGELOG.md` file included with the package for the full version history.
 
-## License
+## Licence
 
 MIT — see the `LICENSE` file included with the package.
 
