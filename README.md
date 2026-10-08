@@ -191,6 +191,49 @@ Invalid options throw `InvalidArgumentException`: a mode other than
 iOS fires no events: the code goes into the field through the keyboard and
 reaches you through `native:model` and `@complete`.
 
+## What you can build
+
+OTP Autofill is a building block: the code field, the iOS keyboard suggestion and
+the Android SMS reading are done, and the product around them is yours. These
+ideas sit comfortably inside store policy because the plugin only reads the
+one-time code that your own service just sent to the person who is using the app,
+with no SMS permission. It cannot read other messages and it must never be used
+to look at anyone else's texts. Your server has to send the SMS through your own
+SMS provider; the plugin does not send anything.
+
+**Sign-in and sign-up**
+
+- **Phone-number login.** Ask for a number, send a six-digit code from your
+  backend, call `OtpAutofill::start()` and let the field fill itself on both
+  platforms. Verify the code with your API in `@complete`.
+- **Passwordless accounts for consumer apps.** Skip passwords entirely for a
+  shopping, travel or community app, with the code field as the whole sign-in
+  screen.
+- **A second step for an existing account.** Ask for a code before a sensitive
+  action, such as changing a phone number or an email address.
+
+**Money and deliveries**
+
+- **Confirming a payment or a transfer.** The bank or wallet backend sends the
+  code; the field takes it from the SMS. The payment itself stays with your
+  payment provider.
+- **Delivery handover.** A customer gives the courier a code from their own
+  phone to confirm the parcel arrived. Your backend creates and checks the code.
+
+**Services and workplaces**
+
+- **Clinic and appointment check-in.** A patient confirms their number when
+  booking. Keep the message free of medical detail, and follow the stores'
+  health-data rules if the app holds health information.
+- **Staff and gig-worker apps.** A one-time code to verify a phone when someone
+  joins a shift roster or clocks in from their own device.
+
+For zero-tap reading on Android, use retriever mode and add your app hash to the
+SMS; the hash is different for debug builds, your upload key and Play App
+Signing. On iOS the person taps the keyboard suggestion, and Android with Google
+Play services is required for SMS reading. Do not use the codes for anything but
+verifying the person who asked for them, and keep resend limits on your backend.
+
 ## Limitations
 
 - **iOS cannot read SMS.** Autofill needs the user to tap the keyboard
