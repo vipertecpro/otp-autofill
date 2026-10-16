@@ -1,5 +1,7 @@
 # OTP Autofill for NativePHP — SMS one-time codes that fill themselves
 
+![Latest version](https://img.shields.io/packagist/v/vipertecpro/otp-autofill) ![Tests](https://img.shields.io/github/actions/workflow/status/vipertecpro/otp-autofill/tests.yml?branch=main&label=tests) ![PHP](https://img.shields.io/packagist/dependency-v/vipertecpro/otp-autofill/php) ![NativePHP Mobile](https://img.shields.io/packagist/dependency-v/vipertecpro/otp-autofill/nativephp%2Fmobile) ![Platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20Android-informational) ![Licence](https://img.shields.io/packagist/l/vipertecpro/otp-autofill) ![Downloads](https://img.shields.io/packagist/dt/vipertecpro/otp-autofill)
+
 Phone verification and sign-in codes without copy-and-paste. OTP Autofill gives
 you a native **`<native:otp-field>`** — a row of digit boxes backed by a real
 system text field — and the platform machinery that fills it:
